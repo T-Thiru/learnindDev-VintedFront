@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Vinted publish offers</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <img class="logo" src="./assets/img/logo.svg" alt="" />
+      </div>
+    </header>
+    <main>
+      <section class="container">
+        <div class="container-offer">
+          <h1>Publish Offer</h1>
+          <div class="contain-form">
+            <form id="submitOffer" class="offerForm">
+              <input
+                type="text"
+                placeholder="non du produit"
+                id="product_name"
+              />
+              <input type="text" placeholder="prix" id="product_price" />
+              <input type="text" placeholder="marque" id="product_brand" />
+              <input type="text" placeholder="taille" id="product_size" />
+              <input type="text" placeholder="couleur" id="product_color" />
+              <input type="text" placeholder="ville" id="product_city" />
+              <label for="file">choisir votre photo</label>
+              <input type="file" name="file" id="product_pic" />
+              <textarea
+                cols="30"
+                rows="10"
+                placeholder="description du produit"
+                id="product_detail"
+              ></textarea>
+              <input type="submit" value="Publier" />
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+  <script src="./assets/js/main.js"></script>
+</html>

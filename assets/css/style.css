@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: aqua;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+}
+
+header {
+  background-color: white;
+  box-shadow: 1px 10px 5px -4px rgba(0, 0, 0, 0.22);
+}
+
+.logo {
+  height: 6rem;
+  margin: 0px 30px;
+}
+
+section {
+  background-color: azure;
+  box-shadow: 1px 10px 5px -4px rgba(0, 0, 0, 0.22);
+  border-radius: 10px;
+}
+h1 {
+  font-weight: 900;
+  font-size: 3rem;
+  font-style: normal;
+  line-height: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: rgb(18, 133, 133);
+}
+
+.offerForm {
+  display: flex;
+  flex-direction: column;
+  /* align-content: space-between; */
+  gap: 1rem;
+}
+
+input {
+  border-radius: 0.5rem;
+  height: 2rem;
+  text-align: center;
+  border: none;
+  background-color: rgb(140, 242, 242);
+}
+label {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+textarea {
+  border-radius: 0.5rem;
+  text-align: center;
+  border: none;
+  background-color: rgb(140, 242, 242);
+}
+
+button {
+  height: 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 300;
+  font-size: 1rem;
+  background-color: rgb(140, 242, 242);
+  border: none;
+}
