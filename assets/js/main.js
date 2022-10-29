@@ -29,6 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
       let formData = new FormData();
       formData.set("picture", pic);
+      formData.set("title", title.value);
+      formData.set("description", description.value);
+      formData.set("price", price.value);
+      formData.set("condition", condition.value);
+      formData.set("city", city.value);
+      formData.set("brand", brand.value);
+      formData.set("size", size.value);
+      formData.set("color", color.value);
 
       axios
         .post(
