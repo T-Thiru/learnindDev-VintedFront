@@ -22,14 +22,22 @@ document.addEventListener("DOMContentLoaded", () => {
         brand: brand.value,
         size: size.value,
         color: color.value,
-        picture: picture.value,
       };
+      console.log(data);
 
-      const response = await axios.post(
-        "http://localhost:3000//offer/publish",
-        data
-      );
-      console.log(response.data);
-      alert("annonce ajouter");
+      let pic = picture.files[0];
+
+      let formData = new FormData();
+      formData.set("picture", pic);
+
+      axios
+        .post("http://localhost:3000/offer/publish", (data, formData))
+        .then((response) => {
+          console.log(response.data); // Affichera la réponse du serveur
+          alert("annonce ajouter");
+        })
+        .catch((error) => {
+          console.log(error.message); // Affichera d'éventuelles erreurs, notamment en cas de problème de connexion Internet.
+        });
     });
 });
