@@ -31,7 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
       formData.set("picture", pic);
 
       axios
-        .post("http://localhost:3000/offer/publish", (data, formData))
+        .post(
+          "https://vinted--difficult-club--56xblq4s6sr6.code.run/offer/publish",
+          (data, formData)
+        )
         .then((response) => {
           console.log(response.data); // Affichera la réponse du serveur
           alert("annonce ajouter");
