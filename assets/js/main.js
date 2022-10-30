@@ -13,17 +13,17 @@ document.addEventListener("DOMContentLoaded", () => {
     .getElementById("submitOffer")
     .addEventListener("submit", async (event) => {
       event.preventDefault();
-      const data = {
-        title: title.value,
-        description: description.value,
-        price: price.value,
-        condition: condition.value,
-        city: city.value,
-        brand: brand.value,
-        size: size.value,
-        color: color.value,
-      };
-      console.log(data);
+      // const data = {
+      //   title: title.value,
+      //   description: description.value,
+      //   price: price.value,
+      //   condition: condition.value,
+      //   city: city.value,
+      //   brand: brand.value,
+      //   size: size.value,
+      //   color: color.value,
+      // };
+      // console.log(data);
 
       let pic = picture.files[0];
 
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
       axios
         .post(
           "https://vinted--difficult-club--56xblq4s6sr6.code.run/offer/publish",
-          (data, formData)
+          formData
         )
         .then((response) => {
           console.log(response.data); // Affichera la réponse du serveur
