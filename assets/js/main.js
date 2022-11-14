@@ -23,12 +23,15 @@ document.addEventListener("DOMContentLoaded", () => {
       //   size: size.value,
       //   color: color.value,
       // };
-      // console.log(data);
-
-      let pic = picture.files[0];
+      console.log(picture.files);
 
       let formData = new FormData();
-      formData.set("picture", pic);
+      let pics = [];
+      for (let i = 0; i < picture.files.length; i++) {
+        // pics.push(picture.files[i]);
+        formData.append(`pictures${[i]}`, picture.files[i]);
+      }
+
       formData.set("title", title.value);
       formData.set("description", description.value);
       formData.set("price", price.value);
@@ -39,10 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
       formData.set("color", color.value);
 
       axios
-        .post(
-          "https://vinted--difficult-club--56xblq4s6sr6.code.run/offer/publish",
-          formData
-        )
+        .post("http://localhost:3001/offer/publish", formData)
         .then((response) => {
           console.log(response.data); // Affichera la réponse du serveur
           alert("annonce ajouter");
